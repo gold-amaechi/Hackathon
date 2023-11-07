@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}To-Do List{% endblock %}</title>
+    {% block css %}{% endblock %}
+</head>
+<body>
+    <header>
+        <h1>To-Do List Application</h1>
+    </header>
+
+    <nav>
+        <!-- Navigation Links -->
+        <a href="{% url 'todo:task-list' %}">Home</a>
+        <a href="{% url 'todo:task-add' %}">Add New Task</a>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2023 To-Do List Application</p>
+    </footer>
+
+    {% block javascript %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+  <h2>Task List</h2>
+  <ul>
+    {% for task in tasks %}
+      <li>
+        {{ task.title }} - {{ task.get_priority_display }}
+        <a href="{% url 'todo:task-detail' task.id %}">View</a>
+        <a href="{% url 'todo:task-update' task.id %}">Edit</a>
+        <a href="{% url 'todo:task-delete' task.id %}">Delete</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
