@@ -44,13 +44,13 @@ The project structure includes the following directories and files:
 
 1. Clone the repository to your local machine:
 
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/gold-amaechi/Hackathon.git
+   cd Hackathon
 
 2. Create a virtual environment and install project dependencies:
-  python -m venv "your virtual environment name"
-  source "your virtual environment name"/bin/activate  # On Windows: venv\Scripts\activate
-  pip install -r requirements.txt
+  -python -m venv "your virtual environment name"
+  -source "your virtual environment name"/bin/activate  # On Windows: venv\Scripts\activate
+  -pip install -r requirements.txt
 
 3. Apply migrations and create a superuser
   python manage.py makemigrations
