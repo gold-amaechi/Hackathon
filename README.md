@@ -43,8 +43,8 @@ The project structure includes the following directories and files:
 ## Installation and Usage
 
 1. Clone the repository to your local machine:
-  - git clone https://github.com/gold-amaechi/Hackathon.git
-  - cd Hackathon
+   - git clone https://github.com/gold-amaechi/Hackathon.git
+   - - cd Hackathon
 
 2. Create a virtual environment and install project dependencies:
   - python -m venv "your virtual environment name"
