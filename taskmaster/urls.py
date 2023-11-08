@@ -20,5 +20,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('todo/', include('todo.urls')),
+    path('users/', include('users.urls')),
+    # path('accounts/', include('django.contrib.auth.urls')),   for authentication views
     #path('todo/edit/<str:task.title>/', include('edit.urls'))
 ]

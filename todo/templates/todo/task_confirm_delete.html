@@ -1,4 +1,5 @@
 {% extends 'todo/base.html' %}
+{% load crispy_forms_tags %}
 {% load static %}
 {% block content %}
 <style>
@@ -26,6 +27,7 @@ form {
   <div class="vertical_center">
     <form method="post">
       {% csrf_token %}
+      {% crispy form %}
       <button type="submit" class="btn btn-secondary" style="width:100px">Yes, delete</button>
       <a href="{% url 'todo:task-list' %}" class="btn btn-info" style="width:100px" role="button">Cancel</a>
     </form>

@@ -1,8 +1,9 @@
 {% extends 'todo/base.html' %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
 <style>
-  
   .form{
     display: inline-block;
   }
@@ -10,15 +11,11 @@
 
 <div class="container">
   <h2>{% if object %}Edit{% else %}Add{% endif %} Task</h2>
-  <form method="post">
-    <div class="form-group">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <button type="submit" class="btn btn-secondary">Save</button>
-      <a href="{% url 'todo:task-list' %}" class="btn btn-info" role="button">Cancel</a>
+  <form method="post" class="form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-secondary">Save</button>
+    <a href="{% url 'todo:task-list' %}" class="btn btn-info" role="button">Cancel</a>
   </form>
-    </div>
 </div>
-  
-    
 {% endblock %}
