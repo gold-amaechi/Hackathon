@@ -1,9 +1,11 @@
 {% extends 'todo/base.html' %}
+{% block title %}Home {% endblock %}
 
 {% block content %}
-  <h2>Task List</h2>
 
-  <ul>
+  <h2>Task List</h2>
+<!--
+<ul>
     {% for task in tasks %}
       <li>
         {{ task.title }} - {{ task.get_priority_display }}
@@ -13,10 +15,9 @@
       </li>
     {% endfor %}
   </ul>
-  <div class="task_table">
-    <ul id="myUL"></ul>
-  </div>
-  <table class="table table-dark" id="taskTable">
+  
+-->
+<table class="table table-dark" id="taskTable">
     <thead>
       <tr>
         <th scope="col">Task Name</th>
@@ -26,4 +27,36 @@
         <th scope="col">Completed?</th>
       </tr>
     </thead>
+      {% for task in tasks %}
+      <tr>
+        <td>{{ task.title }}</td>
+        <td>{{ task.description }}</td>
+        <td> {{ task.date }}</td>
+        <td>{{task.priority}}</td>
+        <td><input type="checkbox" value="check"></td>
+        <td><a href="{% url 'todo:task-detail' task.id %}">View</a></td>
+        <td><a href="{% url 'todo:task-update' task.id %}">Edit</a></td>
+        <td><a href="{% url 'todo:task-delete' task.id %}">Delete</a></td>
+      </tr>
+      {% endfor %}
+    
+</div>
+  
 {% endblock %}
+
+<script>
+  const table = document.getElementById("taskTable");
+        const checkboxes = document.querySelectorAll(".move-checkbox");
+
+        // Add click event listeners to checkboxes
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener("change", () => {
+                if (checkbox.checked) {
+                    // Get the row that contains the checked checkbox
+                    const row = checkbox.closest("tr");
+                    // Move the row to the bottom of the table
+                    table.appendChild(row);
+                }
+            });
+        });
+</script>

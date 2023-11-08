@@ -1,10 +1,23 @@
-{% extends 'base.html' %}
+{% extends 'todo/base.html' %}
 
 {% block content %}
+<style>
+  
+  .form{
+    display: inline-block;
+  }
+</style>
+
+<div class="container">
   <h2>{% if object %}Edit{% else %}Add{% endif %} Task</h2>
   <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Save</button>
+    <div class="form-group">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Save</button>
   </form>
+    </div>
+</div>
+  
+    
 {% endblock %}
