@@ -39,6 +39,8 @@ The project structure includes the following directories and files:
 - **users:** Django app for user authentication.
 
 - **manage.py:** Django management script.
+  
+- **requirements.txt:** Contains a list of project dependencies.
 
 ## Installation and Usage
 
