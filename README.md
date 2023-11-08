@@ -47,17 +47,17 @@ The project structure includes the following directories and files:
    - cd Hackathon
 
 2. Create a virtual environment and install project dependencies:
-  - python -m venv "your virtual environment name"
-  - source "your virtual environment name"/bin/activate  # On Windows: venv\Scripts\activate
-  - pip install -r requirements.txt
+    - python -m venv "your virtual environment name"
+    - source "your virtual environment name"/bin/activate  # On Windows: venv\Scripts\activate
+    - pip install -r requirements.txt
 
 3. Apply migrations and create a superuser
-  - python manage.py makemigrations
-  - python manage.py migrate
-  - python manage.py createsuperuser
+    - python manage.py makemigrations
+    - python manage.py migrate
+    - python manage.py createsuperuser
 
 4. Start the development server:
-  - python manage.py runserver
+    - python manage.py runserver
 
 6. Open your web browser and navigate to http://localhost:8000 to access the app.
 
