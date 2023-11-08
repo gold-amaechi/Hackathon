@@ -1,10 +1,36 @@
 {% extends 'todo/base.html' %}
 {% load static %}
 {% block content %}
-  <h2>Are you sure you want to delete "{{ task.title }}"?</h2>
-  <form method="post">
-    {% csrf_token %}
-    <button type="submit">Yes, delete</button>
-    <a href="{% url 'todo:task-list' %}">Cancel</a>
-  </form>
+<style>
+.container {
+  height: 300px;
+  position: relative;
+  border: 3px solid purple;
+  text-align:center;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+form {
+    display: inline-block;
+}
+</style>
+<div class="container">
+  <h2 style="text-align:center">Are you sure you want to delete "{{ task.title }}"?</h2>
+  <div class="vertical_center">
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-secondary">Yes, delete</button>
+      <br>
+      <a href="{% url 'todo:task-list' %}">Cancel</a>
+    </form>
+  </div>
+  
+
+  
 {% endblock %}
