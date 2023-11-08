@@ -1,6 +1,12 @@
 {% extends 'todo/base.html' %}
+{% block title %}Home {% endblock %}
+
+{% block template %}
+{% include "components/navbar.html" %}
+{% end block %} 
 
 {% block content %}
+
   <h2>Task List</h2>
 
   <ul>
@@ -13,17 +19,5 @@
       </li>
     {% endfor %}
   </ul>
-  <div class="task_table">
-    <ul id="myUL"></ul>
-  </div>
-  <table class="table table-dark" id="taskTable">
-    <thead>
-      <tr>
-        <th scope="col">Task Name</th>
-        <th scope="col">Task Description</th>
-        <th scope="col">Task Deadline</th>
-        <th scope="col">Task Priority Level</th>
-        <th scope="col">Completed?</th>
-      </tr>
-    </thead>
+  
 {% endblock %}
