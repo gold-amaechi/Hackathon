@@ -21,13 +21,13 @@ form {
 }
 </style>
 <div class="container">
-  <h2 style="text-align:center">Are you sure you want to delete "{{ task.title }}"?</h2>
+  <h2 style="text-align:center; padding:20px">Are you sure you want to delete task "{{ task.title }}"?</h2>
+  <br>
   <div class="vertical_center">
     <form method="post">
       {% csrf_token %}
-      <button type="submit" class="btn btn-secondary">Yes, delete</button>
-      <br>
-      <a href="{% url 'todo:task-list' %}" class="btn btn-info" role="button">Cancel</a>
+      <button type="submit" class="btn btn-secondary" style="width:100px">Yes, delete</button>
+      <a href="{% url 'todo:task-list' %}" class="btn btn-info" style="width:100px" role="button">Cancel</a>
     </form>
   </div>
   
