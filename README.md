@@ -44,7 +44,7 @@ The project structure includes the following directories and files:
 
 1. Clone the repository to your local machine:
    - git clone https://github.com/gold-amaechi/Hackathon.git
-   - - cd Hackathon
+   - cd Hackathon
 
 2. Create a virtual environment and install project dependencies:
   - python -m venv "your virtual environment name"
@@ -59,7 +59,7 @@ The project structure includes the following directories and files:
 4. Start the development server:
   - python manage.py runserver
 
-5. Open your web browser and navigate to http://localhost:8000 to access the app.
+6. Open your web browser and navigate to http://localhost:8000 to access the app.
 
 To access the admin panel, log in with your superuser credentials at http://localhost:8000/admin/.
 
