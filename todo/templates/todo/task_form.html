@@ -15,6 +15,7 @@
       {% csrf_token %}
       {{ form.as_p }}
       <button type="submit" class="btn btn-secondary">Save</button>
+      <a href="{% url 'todo:task-list' %}" class="btn btn-info" role="button">Cancel</a>
   </form>
     </div>
 </div>
